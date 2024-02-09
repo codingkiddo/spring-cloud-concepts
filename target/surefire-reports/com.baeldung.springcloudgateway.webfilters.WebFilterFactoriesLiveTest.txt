@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: com.baeldung.springcloudgateway.webfilters.WebFilterFactoriesLiveTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.569 s <<< FAILURE! -- in com.baeldung.springcloudgateway.webfilters.WebFilterFactoriesLiveTest
+com.baeldung.springcloudgateway.webfilters.WebFilterFactoriesLiveTest.whenCallGetThroughGateway_thenAllHTTPRequestHeadersParametersAreSet -- Time elapsed: 0.100 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 200 OK
+ but was: 401 UNAUTHORIZED
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at com.baeldung.springcloudgateway.webfilters.WebFilterFactoriesLiveTest.whenCallGetThroughGateway_thenAllHTTPRequestHeadersParametersAreSet(WebFilterFactoriesLiveTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+com.baeldung.springcloudgateway.webfilters.WebFilterFactoriesLiveTest.whenCallHeaderPostThroughGateway_thenAllHTTPResponseHeadersAreSet -- Time elapsed: 0.053 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200 OK> but was:<403 FORBIDDEN>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.reactive.server.StatusAssertions.lambda$assertStatusAndReturn$4(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:222)
+	at org.springframework.test.web.reactive.server.StatusAssertions.assertStatusAndReturn(StatusAssertions.java:236)
+	at org.springframework.test.web.reactive.server.StatusAssertions.isOk(StatusAssertions.java:68)
+	at com.baeldung.springcloudgateway.webfilters.WebFilterFactoriesLiveTest.whenCallHeaderPostThroughGateway_thenAllHTTPResponseHeadersAreSet(WebFilterFactoriesLiveTest.java:59)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
