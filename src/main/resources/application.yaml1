@@ -1,0 +1,32 @@
+logging:
+   level:
+      org.springframework.cloud.gateway: DEBUG
+      reactor.netty.http.client: DEBUG
+      
+spring:
+   cloud:
+      aws:
+         credentials:
+            access-key: AKIATCKAQNVKTHKIUOEV
+            secret-key: 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
+         region: 
+            static: eu-central-1
+            auto: false
+   
+custom:
+   bucket-name: stratospheric-demo-application
+   sqs-queue-name: sqs-queue-name
+ 
+events:
+   queues:
+      order-processing-retry-queue: order_processing_retry_queue
+      order-processing-async-queue: order_processing_async_queue
+      order-processing-no-retries-queue: order_processing_no_retries_queue
+   acknowledgment:
+      order-processing-no-retries-queue: ALWAYS
+
+product:
+   id:
+      smartphone: 123e4567-e89b-12d3-a456-426614174000
+      wireless-headphones: 123e4567-e89b-12d3-a456-426614174001
+      laptop: 123e4567-e89b-12d3-a456-426614174002

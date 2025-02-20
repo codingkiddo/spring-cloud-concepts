@@ -1,0 +1,22 @@
+# configurations for AWS SDK consumer and producer
+aws.access.key=AKIATCKAQNVKTHKIUOEV
+aws.secret.key=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
+
+ips.partition.key=123
+ips.stream=mykinesis-Stream-batLjdmjKRYM
+ips.shard.id=0
+
+# configurations for Spring Cloud Stream Kineses Binder consumer and producer
+cloud.aws.credentials.access-key=AKIATCKAQNVKTHKIUOEV
+cloud.aws.credentials.secret-key=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
+cloud.aws.region.static=eu-central-1
+cloud.aws.stack.auto=false
+
+spring.cloud.stream.bindings.input-in-0.destination=mykinesis-Stream-batLjdmjKRYM
+spring.cloud.stream.bindings.input-in-0.group=live-ips-group
+spring.cloud.stream.bindings.input-in-0.content-type=text/plain
+spring.cloud.stream.function.definition = input
+
+spring.cloud.stream.bindings.output-out-0.destination=myStream
+spring.cloud.stream.bindings.output-out-0.content-type=text/plain
+spring.cloud.stream.poller.fixed-delay = 3000

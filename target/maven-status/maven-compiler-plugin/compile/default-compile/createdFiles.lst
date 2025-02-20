@@ -1,0 +1,5 @@
+com/springcloudconcepts/ConsumerSDK.class
+com/springcloudconcepts/QueueListener.class
+com/springcloudconcepts/SpringCloudConceptsApplication.class
+com/springcloudconcepts/DashboardController.class
+com/springcloudconcepts/KinesisSDKApplication.class
